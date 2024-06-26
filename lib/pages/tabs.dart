@@ -34,6 +34,7 @@ class _TabsState extends State<Tabs> {
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "首页"),
             BottomNavigationBarItem(icon: Icon(Icons.settings), label: "设置"),
           ]),
+
       floatingActionButton: FloatingActionButton(onPressed: () {
 
       },child: const Icon(Icons.add),),
