@@ -38,6 +38,14 @@ class _HomePageState extends State<HomePage> {
               });
             },
             child: const Text("命名路由传值"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "/shop", arguments: {
+                "title": "shop传值",
+              });
+            },
+            child: const Text("命名路由传值→shop"),
           )
         ],
       ),

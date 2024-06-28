@@ -43,10 +43,10 @@ class _HomePagesState extends State<HomePages>
       appBar: AppBar(
         leading: IconButton(
             icon: const Icon(Icons.menu),
-            onPressed: () {
+            onPressed: () { 
               print("左侧的按钮图标");
             }),
-        title: Text("tab demo"),
+        title: const Text("tab demo"),
         backgroundColor: Colors.red,
         actions: [
           IconButton(
