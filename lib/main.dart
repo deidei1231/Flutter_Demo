@@ -17,6 +17,9 @@ class Myapp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(
+            centerTitle: true
+          )
         ),
         // home: const Tabs(),
         initialRoute: "/",

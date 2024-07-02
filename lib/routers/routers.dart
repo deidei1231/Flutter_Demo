@@ -4,6 +4,8 @@ import '../pages/news.dart';
 import '../pages/search.dart';
 import '../pages/shop.dart';
 import 'package:demo/pages/tabs.dart';
+// 配置IOS风格
+import 'package:flutter/cupertino.dart';
 
 Map routers = {
   "/": (context) => const Tabs(),
@@ -19,12 +21,14 @@ var onGenerateRoute = (RouteSettings settings) {
   final Function? pageContentBuilder = routers[name];
   if (pageContentBuilder != null) {
     if (settings.arguments != null) {
-      final Route route = MaterialPageRoute(
+      // final Route route = MaterialPageRoute(
+      final Route route = CupertinoPageRoute(
           builder: (context) => pageContentBuilder(context,
               arguments: settings.arguments));
       return route;
     } else {
-      final Route route = MaterialPageRoute(
+      // final Route route = MaterialPageRoute(
+      final Route route = CupertinoPageRoute(
           builder: (context) => pageContentBuilder(context));
       return route;
     }

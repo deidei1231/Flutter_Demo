@@ -4,15 +4,22 @@ import './tabs/settings.dart';
 import './tabs/message.dart';
 
 class Tabs extends StatefulWidget {
-  const Tabs({super.key});
+  final int index;
+  const Tabs({super.key, this.index = 0});
 
   @override
   State<Tabs> createState() => _TabsState();
 }
 
 class _TabsState extends State<Tabs> {
-  int _currentIndex = 0;
+  late int _currentIndex = 0;
   final List<Widget> _pages = const [HomePage(), SettingsPage(), MessagePage()];
+
+  @override
+  void initState() {
+    super.initState();
+    _currentIndex = widget.index;
+  }
 
   @override
   Widget build(BuildContext context) {

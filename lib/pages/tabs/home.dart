@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../search.dart';
 import '../news.dart';
 import '../form.dart';
+import '../shop.dart';
+import '../tabs.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -41,9 +43,19 @@ class _HomePageState extends State<HomePage> {
           ),
           ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, "/shop", arguments: {
-                "title": "shop传值",
-              });
+              // Navigator.pushNamed(context, "/shop", arguments: {
+              //   "title": "shop传值",
+              // });
+              // // 正常跳转
+              // Navigator.of(context).pushNamed("/shop");
+              // // 替换跳转
+              // Navigator.of(context).pushReplacementNamed("/shop");
+              Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(builder: (BuildContext context){
+                  return const Tabs(index: 1,);
+                }), (router) => false
+              );
+
             },
             child: const Text("命名路由传值→shop"),
           )
