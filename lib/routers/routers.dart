@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pages/form.dart';
-import '../pages/news.dart';
-import '../pages/search.dart';
+import '../pages/dialog.dart';
 import '../pages/shop.dart';
 import 'package:demo/pages/tabs.dart';
 // 配置IOS风格
@@ -9,9 +7,7 @@ import 'package:flutter/cupertino.dart';
 
 Map routers = {
   "/": (context) => const Tabs(),
-  "/news": (context) => const NewsPage(),
-  "/search": (context) => const SearchPage(),
-  "/form": (context, {arguments}) => FormPage(arguments: arguments),
+  "/dialog": (context) => const DialogPage(),
   "/shop": (context, {arguments}) => ShopPage(arguments: arguments)
 };
 

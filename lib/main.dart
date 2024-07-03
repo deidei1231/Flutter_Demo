@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import './routers/routers.dart';
 
 void main() {
-  runApp(Myapp());
+  runApp(const Myapp());
 }
 
 class Myapp extends StatelessWidget {
-  Myapp({super.key});
+  const Myapp({super.key});
 
   @override
   Widget build(BuildContext context) {

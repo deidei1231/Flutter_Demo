@@ -52,13 +52,16 @@ class _HomePageState extends State<HomePage> {
               // Navigator.of(context).pushReplacementNamed("/shop");
               Navigator.of(context).pushAndRemoveUntil(
                 MaterialPageRoute(builder: (BuildContext context){
-                  return const Tabs(index: 1,);
+                  return const Tabs(index: 1);
                 }), (router) => false
               );
-
             },
             child: const Text("命名路由传值→shop"),
-          )
+          ),
+          const SizedBox(height: 30),
+          ElevatedButton(onPressed: () {
+            Navigator.of(context).pushNamed("/dialog");
+          }, child: const Text('Dialog演示'))
         ],
       ),
     );

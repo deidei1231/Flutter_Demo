@@ -26,7 +26,7 @@ class Myapp extends StatelessWidget {
         "/": (context) => const Tabs(),
         "/news": (context) => const NewsPage(),
         "/search": (context) => const SearchPage(),
-        "/form": (context) => const FormPage(),
+        "/form": (context) => const FormPage(arguments: {},),
       },
     );
   }
