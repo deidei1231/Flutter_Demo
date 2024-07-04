@@ -1,5 +1,7 @@
+import 'package:demo/pages/tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
 import '../widget/myDialog.dart';
 
 class DialogPage extends StatefulWidget {
@@ -133,6 +135,11 @@ class _DialogPageState extends State<DialogPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              ElevatedButton(onPressed: () {
+                // Navigator.of(context).pushNamed("/dialog");
+                Get.offAll(const Tabs(index: 1));
+              }, child: const Text('Get返回根目录')),
+              const SizedBox(height: 20),
               ElevatedButton(
                   onPressed: _alertDialog,
                   child: const Text("alert_dialog弹出框")),
