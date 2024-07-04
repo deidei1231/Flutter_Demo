@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 class MyDialog extends Dialog {
   final String title;
   final String content;
+  final Function()? onTap;
 
-  const MyDialog({super.key, required this.title, required this.content});
+  const MyDialog(
+      {super.key,
+      required this.title,
+      required this.content,
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +38,8 @@ class MyDialog extends Dialog {
                             // child: IconButton(
                             //     onPressed: () {}, icon: const Icon(Icons.close)),
                             child: InkWell(
+                              onTap: onTap,
                               child: const Icon(Icons.close),
-                              onTap: () {
-                                Navigator.of(context).pop();
-                              },
                             )),
                       ],
                     ),

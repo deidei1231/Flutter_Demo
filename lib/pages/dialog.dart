@@ -109,9 +109,18 @@ class _DialogPageState extends State<DialogPage> {
   }
 
   void _myDialog() {
-    showDialog(barrierDismissible: false,context: context, builder: (context){
-      return const MyDialog(title: "我是自定义dialog",content: "自定义content",);
-    });
+    showDialog(
+        barrierDismissible: false,
+        context: context,
+        builder: (context) {
+          return MyDialog(
+            title: "我是自定义dialog",
+            content: "自定义content",
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          );
+        });
   }
 
   @override
